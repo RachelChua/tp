@@ -136,9 +136,28 @@ public class ModelManager implements Model {
     }
 
     @Override
+    public boolean hasTaskWithModule(Module module) {
+        requireNonNull(module);
+        return addressBook.hasTaskWithModule(module);
+    }
+
+
+    @Override
     public void addTask(Task task) {
         addressBook.addTask(task);
         updateFilteredTaskList(PREDICATE_SHOW_ALL_TASKS);
+    }
+
+    @Override
+    public void setTask(Task target, Task editedTask) {
+        requireAllNonNull(target, editedTask);
+
+        addressBook.setTask(target, editedTask);
+    }
+
+    @Override
+    public void deleteTask(Task target) {
+        addressBook.removeTask(target);
     }
 
     //=========== Filtered Person List Accessors =============================================================
@@ -151,7 +170,6 @@ public class ModelManager implements Model {
     public ObservableList<Person> getFilteredPersonList() {
         return filteredPersons;
     }
-
 
     @Override
     public void updateFilteredPersonList(Predicate<Person> predicate) {
@@ -183,6 +201,12 @@ public class ModelManager implements Model {
         requireNonNull(predicate);
         moduleFilteredList.setPredicate(predicate);
     }
+
+    @Override
+    public void deleteModule(Module target) {
+        addressBook.removeModule(target);
+    }
+
     //================================Task Commands=====================================
     @Override
     public ObservableList<Task> getFilteredTaskList() {
