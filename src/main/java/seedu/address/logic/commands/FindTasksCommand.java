@@ -2,16 +2,10 @@ package seedu.address.logic.commands;
 
 import static java.util.Objects.requireNonNull;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.collections.transformation.FilteredList;
 import seedu.address.commons.core.Messages;
-import seedu.address.logic.LogicManager;
-import seedu.address.model.AddressBook;
 import seedu.address.model.Model;
 import seedu.address.model.task.DescriptionContainsKeywordsPredicate;
 
-import java.util.List;
 
 /**
  * Finds and lists all tasks in the task list whose description contains any of the argument keywords.
@@ -20,7 +14,8 @@ import java.util.List;
 public class FindTasksCommand extends Command {
     public static final String COMMAND_WORD = "findtasks";
 
-    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Finds all tasks whose names contain partially or fully any of "
+    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Finds all tasks whose names "
+            + "contain partially or fully any of "
             + "the specified keywords (case-insensitive) and displays them as a list with index numbers.\n"
             + "Parameters: KEYWORD [MORE_KEYWORDS]...\n"
             + "Example: " + COMMAND_WORD + " task";

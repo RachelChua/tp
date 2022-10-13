@@ -6,6 +6,7 @@ import static seedu.address.commons.util.CollectionUtil.requireAllNonNull;
 import java.nio.file.Path;
 import java.util.function.Predicate;
 import java.util.logging.Logger;
+
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
@@ -32,7 +33,7 @@ public class ModelManager implements Model {
     private final FilteredList<Task> taskFilteredList;
     private final SortedList<Task> taskSortedByDescriptionLengthList;
 
-    boolean isFindCommand;
+    private boolean isFindCommand;
 
 
     /**

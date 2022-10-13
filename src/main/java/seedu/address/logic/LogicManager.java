@@ -102,6 +102,6 @@ public class LogicManager implements Logic {
     }
     @Override
     public void setFalseToIndicateCommandIsNotFindCommand() {
-         model.setFalseToIndicateCommandIsNotFindCommand();
+        model.setFalseToIndicateCommandIsNotFindCommand();
     }
 }
