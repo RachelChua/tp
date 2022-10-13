@@ -13,7 +13,7 @@ import seedu.address.model.task.DescriptionContainsKeywordsPredicate;
 /**
  * Parses input arguments and creates a new FindTaskCommand object
  */
-public class FindTaskCommandParser implements Parser<FindTasksCommand> {
+public class FindTasksCommandParser implements Parser<FindTasksCommand> {
     /**
      * Parses the given {@code String} of arguments in the context of the FindTaskCommand
      * and returns a FindTaskCommand object for execution.

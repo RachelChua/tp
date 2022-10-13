@@ -157,5 +157,5 @@ public interface Model {
      */
     boolean isFindCommand();
 
-    void setFalseToIndicateCommandIsNotFindCommand();
+    void indicateCommandIsNotFindCommand();
 }

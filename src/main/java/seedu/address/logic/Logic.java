@@ -64,5 +64,5 @@ public interface Logic {
      */
     boolean isFindCommand();
 
-    void setFalseToIndicateCommandIsNotFindCommand();
+    void indicateCommandIsNotFindCommand();
 }

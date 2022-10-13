@@ -239,7 +239,7 @@ public class ModelManager implements Model {
     }
 
     @Override
-    public void setFalseToIndicateCommandIsNotFindCommand() {
+    public void indicateCommandIsNotFindCommand() {
         isFindCommand = false;
     }
 
